@@ -721,7 +721,7 @@ async def set_priority(request):
 @routes.get("/")
 async def homepage(request):
     return web.Response(
-        text='<h1>🤗TorToolkitX webserver is Up and Running successfully🟢</h1>\n<h2>⚡See TorToolkitX on <a href="https://github.com/XcodersHub/TorToolkitX">@GitHub</a></h2>\n<h2>🥲Join XcodersHub <a href="https://t.me/XcodersHub">TG channel</a></h2>',
+        text='<h1>🤗IAC webserver is Up and Running successfully🟢</h1>\n<h2>⚡See IAC on <a href="https://t.me/theindiananimeclub">@GitHub</a></h2>\n<h2>🥲Join IAC <a href="https://t.me/theindiananimeclub">TG channel</a></h2>',
         content_type="text/html",
     )
 
@@ -732,14 +732,14 @@ async def e404_middleware(app, handler):
             response = await handler(request)
             if response.status == 404:
                 return web.Response(
-                    text="<h1>404: Page not found</h2><br><h3>TorToolKitX</h3>",
+                    text="<h1>404: Page not found</h2><br><h3>IAC</h3>",
                     content_type="text/html",
                 )
             return response
         except web.HTTPException as ex:
             if ex.status == 404:
                 return web.Response(
-                    text="<h1>404: Page not found</h2><br><h3>TorToolKitX</h3>",
+                    text="<h1>404: Page not found</h2><br><h3>IAC</h3>",
                     content_type="text/html",
                 )
             raise
